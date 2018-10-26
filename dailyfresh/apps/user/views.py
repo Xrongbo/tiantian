@@ -9,7 +9,7 @@ from django.conf import settings
 
 from user.models import User,Address
 from goods.models import GoodsSKU
-from celety_tasks.tasks import send_register_active_email
+from celery_tasks.tasks import send_register_active_email
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from itsdangerous import SignatureExpired
 from utils.mixin import LoginRequirdeMixin
