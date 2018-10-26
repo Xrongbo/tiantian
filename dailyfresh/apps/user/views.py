@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.core.urlresolvers import reverse
 # from django.core.mail import send_mail
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 from django.views.generic import View
 from django.http import HttpResponse
 from django.conf import settings
@@ -235,6 +235,15 @@ class LoginView(View):
         else:
             # 用户名或密码错误
             return render(request,'login.html',{'errmsg':'用户名或密码错误'})
+
+# /user/logout
+class LogoutView(View):
+    '''退出登录'''
+    def get(self,request):
+        # 清除用户的session信息
+        logout(request)
+        # 跳转到首页
+        return redirect(reverse('goods:index'))
 
 # /user
 class UserInfoView(LoginRequirdeMixin,View):
