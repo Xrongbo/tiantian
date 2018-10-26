@@ -11,6 +11,7 @@ from user.models import User
 from celety_tasks.tasks import send_register_active_email
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from itsdangerous import SignatureExpired
+from utils.mixin import LoginRequirdeMixin
 import re
 import time
 
@@ -236,7 +237,7 @@ class LoginView(View):
             return render(request,'login.html',{'errmsg':'用户名或密码错误'})
 
 # /user
-class UserInfoView(View):
+class UserInfoView(LoginRequirdeMixin,View):
     '''用户中心-信息页'''
     def get(self,request):
         '''显示'''
@@ -244,7 +245,7 @@ class UserInfoView(View):
         return render(request,'user_center_info.html',{'page':'user'})
 
 # /user/order
-class UserOrderView(View):
+class UserOrderView(LoginRequirdeMixin,View):
     '''用户中心-订单页'''
     def get(self,request):
         '''显示'''
@@ -252,7 +253,7 @@ class UserOrderView(View):
         return render(request,'user_center_order.html',{'page':'order'})
 
 # /user/address
-class UserSiteView(View):
+class UserSiteView(LoginRequirdeMixin,View):
     '''用户中心-地址页'''
     def get(self,request):
         '''显示'''
