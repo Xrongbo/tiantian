@@ -207,10 +207,17 @@ class LoginView(View):
         if user is not None:
             if user.is_active:
                 # 用户已激活
-                # 记录用户的登陆状态
+                # 记录用户的登陆状态,判断是否登录
                 login(request,user)
+
                 # 跳转到首页
-                response =  redirect(reverse('goods:index')) # HttpResponseRedirect
+                # 获取登录后所要跳转到的地址,如果不是从其它页面跳转过来的，它的值为None，然后默认跳到首页,比如用户中心转过来的
+                next_url = request.GET.get('next', reverse('goods:index')) # None
+
+                # 跳转到next_url
+
+                response = redirect(next_url) # HttpResponseRedirect
+
                 # 判断是否需要记住用户名
                 remember = request.POST.get('remember')
 
