@@ -32,15 +32,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="104e38c1-786d-4866-ae9c-308163c0936b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/goods/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/order/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/order/migrations/0002_auto_20181024_0030.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/user/migrations/0001_initial.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/goods/admin.py" afterPath="$PROJECT_DIR$/apps/goods/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/celery_tasks/tasks.py" afterPath="$PROJECT_DIR$/celery_tasks/tasks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user_center_info.html" afterPath="$PROJECT_DIR$/templates/user_center_info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user_center_site.html" afterPath="$PROJECT_DIR$/templates/user_center_site.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/goods/views.py" afterPath="$PROJECT_DIR$/apps/goods/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/celery_tasks/tasks.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="612">
-              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+              <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="e#11#49#0" expanded="true" />
               </folding>
@@ -81,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/goods/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="676">
-              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+              <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -93,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="56" column="53" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="56" selection-end-column="53" />
+            <state relative-caret-position="638">
+              <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="38" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -182,7 +174,6 @@
         <option value="$PROJECT_DIR$/celety_tasks/tasks.py" />
         <option value="$PROJECT_DIR$/templates/static_base.html" />
         <option value="$PROJECT_DIR$/templates/static_index.html" />
-        <option value="$PROJECT_DIR$/apps/goods/views.py" />
         <option value="$PROJECT_DIR$/apps/goods/urls.py" />
         <option value="$PROJECT_DIR$/apps/goods/models.py" />
         <option value="$PROJECT_DIR$/templates/base_no_cart.html" />
@@ -198,6 +189,7 @@
         <option value="$PROJECT_DIR$/templates/user_center_site.html" />
         <option value="$PROJECT_DIR$/celery_tasks/tasks.py" />
         <option value="$PROJECT_DIR$/apps/goods/admin.py" />
+        <option value="$PROJECT_DIR$/apps/goods/views.py" />
       </list>
     </option>
   </component>
@@ -1024,7 +1016,7 @@
         <state relative-caret-position="26">
           <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1090,17 +1082,7 @@
         <state relative-caret-position="4030">
           <caret line="155" column="25" lean-forward="true" selection-start-line="155" selection-start-column="25" selection-end-line="155" selection-end-column="25" />
           <folding>
-            <element signature="e#383#392#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="56" column="53" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="56" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#383#392#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1140,7 +1122,7 @@
     <entry file="file://$PROJECT_DIR$/celery_tasks/tasks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
-          <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
           <folding>
             <element signature="e#11#49#0" expanded="true" />
           </folding>
@@ -1150,9 +1132,19 @@
     <entry file="file://$PROJECT_DIR$/apps/goods/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="676">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/goods/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="52" column="38" lean-forward="false" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
