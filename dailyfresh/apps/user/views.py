@@ -256,11 +256,12 @@ class UserInfoView(LoginRequirdeMixin,View):
         # 如果用户登录了 -> User类的一个实例 返回True
 
         # 获取用户的个人信息
-
+        user = request.user
+        address = Address.objects.get_default_address(user)
         # 获取用户的历史浏览信息
 
         # 除了你给模板文件传递的模板变量之外，django框架会把request.suer也传给模板文件
-        return render(request,'user_center_info.html',{'page':'user'})
+        return render(request,'user_center_info.html',{'page':'user','address':address})
 
 # /user/order
 class UserOrderView(LoginRequirdeMixin,View):
