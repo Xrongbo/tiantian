@@ -242,6 +242,11 @@ class UserInfoView(LoginRequirdeMixin,View):
     def get(self,request):
         '''显示'''
         # page = 'user'
+        # request.user.is_authenticated()
+        # request.user 如果用户未登录-> AnonymousUser类的一个实例 is_authenticated()方法返回False
+        # 如果用户登录了 -> User类的一个实例 返回True
+
+        # 除了你给模板文件传递的模板变量之外，django框架会把request.suer也传给模板文件
         return render(request,'user_center_info.html',{'page':'user'})
 
 # /user/order

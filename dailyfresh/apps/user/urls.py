@@ -16,6 +16,7 @@ urlpatterns = [
     # url(r'^order$',login_required(UserOrderView.as_view()),name='order'), # 用户中心-订单页
     # url(r'^address$',login_required(UserSiteView.as_view()),name='address'), # 用户中心-地址页
 
+    # 使用mixin封装类来实现登录验证
     url(r'^$',UserInfoView.as_view(),name='user'), # 用户中心-信息页
     url(r'^order$',UserOrderView.as_view(),name='order'), # 用户中心-订单页
     url(r'^address$',UserSiteView.as_view(),name='address'), # 用户中心-地址页
