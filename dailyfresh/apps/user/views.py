@@ -99,6 +99,7 @@ def register_handle(request):
     return redirect(reverse('goods:index'))
 
 # 类视图，根据请求方式返回不同的处理
+# /user/trgister
 class RegisterView(View):
     '''注册'''
     def get(self,request):
@@ -155,7 +156,7 @@ class RegisterView(View):
         # 返回应答，跳转到首页
         return redirect(reverse('goods:index'))
 
-
+# 激活用户
 class ActiveView(View):
     '''用户激活'''
     def get(self,request,token):
@@ -179,6 +180,7 @@ class ActiveView(View):
             # 激活链接已过期
             return HttpResponse('激活链接已过期')
 
+# /user/login
 class LoginView(View):
     '''显示登陆页面'''
     def get(self,request):
@@ -226,5 +228,27 @@ class LoginView(View):
             # 用户名或密码错误
             return render(request,'login.html',{'errmsg':'用户名或密码错误'})
 
+# /user
+class UserInfoView(View):
+    '''用户中心-信息页'''
+    def get(self,request):
+        '''显示'''
+        # page = 'user'
+        return render(request,'user_center_info.html',{'page':'user'})
 
+# /user/order
+class UserOrderView(View):
+    '''用户中心-订单页'''
+    def get(self,request):
+        '''显示'''
+        # page = 'order'
+        return render(request,'user_center_order.html',{'page':'order'})
+
+# /user/address
+class UserSiteView(View):
+    '''用户中心-地址页'''
+    def get(self,request):
+        '''显示'''
+        # page = 'address'
+        return render(request,'user_center_site.html',{'page':'address'})
 
