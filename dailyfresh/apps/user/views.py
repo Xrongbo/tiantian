@@ -281,11 +281,12 @@ class AddressView(LoginRequirdeMixin,View):
         # 获取登录用户对应User对象
         user = request.user
         # 获取用户的默认收货地址
-        try:
-            address = Address.objects.get(user=user, is_default=True)
-        except Address.DoesNotExist:
-            # 不存在默认收货地址
-            address = None
+        # try:
+        #     address = Address.objects.get(user=user, is_default=True)
+        # except Address.DoesNotExist:
+        #     # 不存在默认收货地址
+        #     address = None
+        address = Address.objects.get_default_address(user)
 
         # page = 'address'
         return render(request,'user_center_site.html',{'page':'address','address':address})
@@ -309,11 +310,8 @@ class AddressView(LoginRequirdeMixin,View):
         # 如果用户已存在默认收货地址，添加的地址不作为默认收货地址，否则作为默认收货地址
         # 获取登录用户对应User对象
         user = request.user
-        try:
-            address = Address.objects.get(user = user , is_default = True)
-        except Address.DoesNotExist:
-            # 不存在默认收货地址
-            address = None
+
+        address = Address.objects.get_default_address(user)
 
         if address:
             is_default = False
